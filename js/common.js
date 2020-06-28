@@ -147,7 +147,7 @@ export function decodePermalink(searchParams, pageSize = undefined) {
 				if (pageSize === undefined) {
 					return i >= 0;
 				} else {
-					return i >= page.value * pageSize - pageSize - 1 && i <= page.value * pageSize;
+					return i >= page.value * pageSize - (pageSize - 1) && i <= page.value * pageSize;
 				}
 			}),
 	};
