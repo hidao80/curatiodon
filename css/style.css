@@ -89,6 +89,11 @@ header+div {
 	width: 60%;
 }
 
+#btnload {
+	display: block;
+	margin: 0 0 0 auto;
+}
+
 .area {
 	width: 44.5%;
 	padding: 2vh 2vw;
