@@ -89,6 +89,10 @@ header+div {
 	width: 60%;
 }
 
+#loadnext {
+	text-align: right;
+}
+
 .area {
 	width: 44.5%;
 	padding: 2vh 2vw;
