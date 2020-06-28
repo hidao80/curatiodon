@@ -89,8 +89,9 @@ header+div {
 	width: 60%;
 }
 
-#loadnext {
-	text-align: right;
+#btnload {
+	display: block;
+	margin: 0 0 0 auto;
 }
 
 .area {
