@@ -144,16 +144,19 @@ export function decodePermalink(searchParams, pageSize = undefined) {
 			.map(id => UncompressOrPassThroughTootId(id))
 			.filter(e => e !== null)
 			.filter((e, i) => {
-				if (pageSize === undefined) {
+				if (page === null || pageSize === undefined) {
 					return i >= 0;
 				} else {
-					return i >= page.value * pageSize - (pageSize - 1) && i <= page.value * pageSize;
-				}
+					return i >= page.value * pageSize && i <= (Number(page.value) +1) * pageSize -1;
+				}	
 			}),
 	};
-	page.value++;
-	if (permalinkObj.toot_ids.length <= 0) {
-		$("btnload").style.display = "none";
+	// プレビュー画面である場合という意図
+	if (page !== null) {
+		page.value++;
+		if (permalinkObj.toot_ids.length <= 0) {
+			$("btnload").style.display = "none";
+		}
 	}
 	return permalinkObj;
 }
