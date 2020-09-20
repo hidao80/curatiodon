@@ -140,6 +140,15 @@ div.area>div p, div.area>div p input[type="text"] {
 	word-break: keep-all;
 }
 
+#urlshorten {
+	margin-left: 10px;
+	word-break: keep-all;
+}
+
+#shorturl {
+	display: none;
+}
+
 .preview-inner {
 	border: 1px dashed #aaa;
 	padding: 20px;
