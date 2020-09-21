@@ -79,22 +79,10 @@ function getShortPermalink() {
 	impl.genPermalink();
 	const apiUrl = "https://script.google.com/macros/s/AKfycbx7UxOiNtDK18hKCxrop-YL5Weubthyto9Yo3yC_hxp3d-PSVY/exec";
 	const urlObj = new URL(apiUrl);
-	urlObj.searchParams.append("q", encodeURIComponent(impl.$("permalink").value));
+//	urlObj.searchParams.append("q", encodeURIComponent(impl.$("permalink").value));
+	urlObj.searchParams.append("q", impl.$("permalink").value);
 	console.log(urlObj.href);
-	fetch(urlObj.href)
-	.then(response => {
-		// なにがしかの反応がAPIからあったらjsonだと思って読んでみる
-		return response.json();
-	})
-	.then(jso => {
-		impl.$("shorturl").value = jso.url;
-		impl.$("shorturl").select();
-		document.execCommand("copy");
-	})
-	.catch(err => {
-		// APIの呼び出しに失敗したとき
-		console.log(err);  // エラー内容をコンソールに出力
-	});
+	window.open(urlObj.href, "shorturl");
 }
 
 function loadPermalink() {

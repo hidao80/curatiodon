@@ -135,18 +135,9 @@ div.area>div p, div.area>div p input[type="text"] {
 	flex-basis: 48%;
 }
 
-#copylink {
+#copylink, #urlshorten {
 	margin-left: 10px;
 	word-break: keep-all;
-}
-
-#urlshorten {
-	margin-left: 10px;
-	word-break: keep-all;
-}
-
-#shorturl {
-	display: none;
 }
 
 .preview-inner {
