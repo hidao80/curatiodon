@@ -77,20 +77,12 @@ function getShortPermalink() {
 		return false;
 	}
 	impl.genPermalink();
-<<<<<<< HEAD
 	const apiUrl = "https://script.google.com/macros/s/AKfycbx7UxOiNtDK18hKCxrop-YL5Weubthyto9Yo3yC_hxp3d-PSVY/exec";
 	const urlObj = new URL(apiUrl);
 //	urlObj.searchParams.append("q", encodeURIComponent(impl.$("permalink").value));
 	urlObj.searchParams.append("q", impl.$("permalink").value);
 	console.log(urlObj.href);
 	window.open(urlObj.href, "shorturl");
-=======
-	impl.$("shorturl").value = impl.$("permalink").value;
-	const target = "shorturl";
-	window.open("", target);
-	impl.$("form_permalink").target = target;
-	impl.$("form_permalink").submit();
->>>>>>> ccf24add56a1e012cd98a432a19f8aa0c7b5f417
 }
 
 function loadPermalink() {
