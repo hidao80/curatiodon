@@ -79,7 +79,6 @@ function getShortPermalink() {
 	impl.genPermalink();
 	const apiUrl = "https://script.google.com/macros/s/AKfycbx7UxOiNtDK18hKCxrop-YL5Weubthyto9Yo3yC_hxp3d-PSVY/exec";
 	const urlObj = new URL(apiUrl);
-//	urlObj.searchParams.append("q", encodeURIComponent(impl.$("permalink").value));
 	urlObj.searchParams.append("q", impl.$("permalink").value);
 	console.log(urlObj.href);
 	window.open(urlObj.href, "shorturl");
