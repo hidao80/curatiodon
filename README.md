@@ -1,6 +1,10 @@
+[![MIT license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE.md)
+[![VanillaJS](https://img.shields.io/badge/Framework-VanillaJS-blue.svg)](https://nodejs.org/ja/)
+![hidao quality](https://img.shields.io/badge/hidao-quality-orange.svg)
+
 # curatiodon is 何
 
-<ruby>curatiodon<rt>きゅれいしょどん</rt></ruby> とは、オープンソースの分散型 SNS「[Mastodon](https://ja.wikipedia.org/wiki/%E3%83%9E%E3%82%B9%E3%83%88%E3%83%89%E3%83%B3_(%E3%83%9F%E3%83%8B%E3%83%96%E3%83%AD%E3%82%B0))」の**トゥート（投稿）を任意の順番でまとめ、パーマリンクの作成と表示およびHTMLファイルとしてダウンロードできるサービス**です。
+<ruby>curatiodon<rt>きゅれーしょどん</rt></ruby> とは、オープンソースの分散型 SNS「[Mastodon](https://ja.wikipedia.org/wiki/%E3%83%9E%E3%82%B9%E3%83%88%E3%83%89%E3%83%B3_(%E3%83%9F%E3%83%8B%E3%83%96%E3%83%AD%E3%82%B0))」の**トゥート（投稿）を任意の順番でまとめ、パーマリンクの作成と表示およびHTMLファイルとしてダウンロードできるサービス**です。
 
 このパーマリンクや静的HTMLにより togetter 的な「まとめサイト」を作成することができます。Mastodon API v1 に対応／互換のあるインスタンス（以下 Mastodon サーバー）の公開トゥートに対して利用できます。
 
