@@ -1,13 +1,3 @@
-/* baloo-bhai-regular - latin-ext_latin */
-@font-face {
-  font-family: 'Baloo Bhai';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Baloo Bhai Regular'), local('BalooBhai-Regular'),
-       url('../fonts/baloo-bhai-v5-latin-ext_latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../fonts/baloo-bhai-v5-latin-ext_latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
 input, button, textarea, select {
 	-webkit-appearance: none;
 	-moz-appearance: none;
@@ -36,14 +26,14 @@ p {
 header {
 	width:100%;
 	height: 57px;
-	background-color: #55c500;
+	background-color: orange;
 	align-items: center;
 }
 
 header h1 a {
 	font-size: 2.3rem;
 	color: white;
-	font-family: 'Baloo Bhai', cursive;
+	font-family: 'Courgette', cursive;
 	text-decoration: none;
 }
 
@@ -155,7 +145,7 @@ button {
 	padding: .5em;
 	border-style: none;
 	border-radius: .5em;
-	background-color: #52b03b;
+	background-color: orange;
 	color: #fff;
 	box-shadow: none;
 	cursor: pointer;
