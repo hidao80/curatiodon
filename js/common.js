@@ -1,6 +1,10 @@
-import * as counter from "./class/counter.js";
-
 export let cardList = [];
+
+let count = 0;
+
+export function nextIndex() {
+	return count++;
+}
 
 export function ready(loaded) {
 	if (["interactive", "complete"].includes(document.readyState)) {
@@ -216,7 +220,7 @@ export async function showCards(permalinkObj, registerEvent = false) {
 		.filter(toot => toot)
 		.forEach(toot => {
 			const tootDiv = createTootDiv(toot);
-			const idx = counter.nextIndex();
+			const idx = nextIndex();
 			tootDiv.setAttribute("id", `o_${idx}`);
 			if (registerEvent === true) {
 				registerEventsToCard(tootDiv);
