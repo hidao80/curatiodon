@@ -25,7 +25,7 @@ function addCard() {
 	const cardPreview = impl.$("card-preview");
 	if (!cardPreview) return;
 	const clone = impl.$("card-preview").firstElementChild.cloneNode(true);
-	const idx = nextIndex();
+	const idx = impl.nextIndex();
 	clone.setAttribute("id", `c_${idx}`);
 	impl.registerEventsToCard(clone);
 	impl.cardList.push(
