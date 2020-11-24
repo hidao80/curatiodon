@@ -1,4 +1,3 @@
-import * as counter from "./class/counter.js";
 import * as impl from "./common.js";
 
 async function showPreview() {
@@ -26,7 +25,7 @@ function addCard() {
 	const cardPreview = impl.$("card-preview");
 	if (!cardPreview) return;
 	const clone = impl.$("card-preview").firstElementChild.cloneNode(true);
-	const idx = counter.nextIndex();
+	const idx = nextIndex();
 	clone.setAttribute("id", `c_${idx}`);
 	impl.registerEventsToCard(clone);
 	impl.cardList.push(
