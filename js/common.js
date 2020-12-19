@@ -312,10 +312,12 @@ export function createTootDiv(toot) {
 			`<img class="emoji" alt=":${emoji.shortcode}:" src="${emoji.url}">`
 		);
 	}
-	const contentHtml = getHtmlFromContent(strContent);
+	const spoiler_text = toot.spoiler_text != undefined ? `<p>${toot.spoiler_text}</p>` : "";
+	const blur = toot.sensitive ? "sensitive" : "";
+	const contentHtml = document.createElement("div").innerHTML = `<div class='${blur}'>${strContent.trim()}</div>`;
 	const media = toot.media_attachments
-		.map(attachment => `<a href='${attachment.url}'><img class='thumbs' src='${attachment.preview_url}'></a>`)
-		.join("");
+	.map(attachment => `<p><a href='${attachment.url}' target='_blank' rel='noopener noreferrer'><img class='thumbs ${blur}' src='${attachment.preview_url}'></a></p>`)
+	.join("");
 	tootDiv.innerHTML = `
 <div class="box">
 	<a href="${toot.account.url}">
@@ -329,7 +331,7 @@ export function createTootDiv(toot) {
 	</a>
 	<a class="toot-time" href="${toot.url}">${timestamp}</a>
 	<div class="e-content" lang="ja" style="display: block; direction: ltr">
-		<p>${contentHtml}</p>
+	${spoiler_text}<p>${contentHtml}</p>
 	</div>
 	${media}
 </div>`;

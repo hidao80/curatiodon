@@ -286,6 +286,14 @@ i:hover .hint {
 	animation-timing-function: ease-out;
 }
 
+.sensitive {
+	filter: blur(15px);
+}
+
+.sensitive:hover {
+	filter: none;
+}
+
 /* for introJS hack... */
 .introjs-helperNumberLayer {
 	top: -16px !important;
