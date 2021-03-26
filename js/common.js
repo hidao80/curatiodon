@@ -316,7 +316,7 @@ export function createTootDiv(toot) {
 	const blur = toot.sensitive ? "sensitive" : "";
 	const contentHtml = document.createElement("div").innerHTML = `<div class='${blur}'>${strContent.trim()}</div>`;
 	const media = toot.media_attachments
-	.map(attachment => `<p><a href='${attachment.url}' target='_blank' rel='noopener noreferrer'><img class='thumbs ${blur}' src='${attachment.preview_url}'></a></p>`)
+	.map(attachment => `<p><a href='${attachment.url}'><img class='thumbs ${blur}' src='${attachment.preview_url}'></a></p>`)
 	.join("");
 	tootDiv.innerHTML = `
 <div class="box">
