@@ -230,6 +230,10 @@ export async function showCards(permalinkObj, registerEvent = false) {
 
 	cardList = cardList.concat(tootIds);
 	genPermalink();
+
+	document.querySelectorAll("code").forEach(block => {
+		hljs.highlightBlock(block);
+	});
 }
 
 /**
