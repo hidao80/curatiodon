@@ -47,28 +47,7 @@ function getOutputHTML() {
 	return html;
 }
 
-/**
- * HTMLファイルのダウンロード
- */
-async function downloadHTMLFile(e) {
-	for (let i = 2; i <= 100; i++) {
-		let result = await impl.showCards(impl.decodePermalink(new URLSearchParams(location.search), 10)).catch(err => console.error(err));
-	}
-	
-  // アンカータグの作成
-  const downLoadLink = document.createElement("a");
-
-  // ダウンロードするHTML文章の生成
-	const outputDataString = getOutputHTML();
-  const downloadFileName = "index.html";
-  downLoadLink.download = downloadFileName;
-  downLoadLink.href = URL.createObjectURL(new Blob([outputDataString], {type: "text/html"}));
-  downLoadLink.dataset.downloadurl = ["text/html", downloadFileName, downLoadLink.href].join(":");
-  downLoadLink.click();
-}
-
 impl.ready(() => {
 	showPreview();
 	impl.$("btnload").addEventListener("click", showPreview);
-	impl.$("btndownload").addEventListener("click", downloadHTMLFile);
 });
