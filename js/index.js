@@ -19,6 +19,10 @@ async function showPreview() {
 	}
 	const tootDiv = impl.createTootDiv(toot);
 	impl.$("card-preview").innerHTML = tootDiv.outerHTML;
+	
+	document.querySelectorAll("code").forEach(block => {
+		hljs.highlightBlock(block);
+	});
 }
 
 function addCard() {
